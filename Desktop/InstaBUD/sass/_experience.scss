@@ -2,6 +2,10 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 
+  @include respond(tab-port) {
+    display: block;
+  }
+
   &__tab {
     display: grid;
     grid-template-rows: 2fr 1fr;

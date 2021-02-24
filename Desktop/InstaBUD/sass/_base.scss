@@ -5,12 +5,6 @@ $color-primary-dark: #b28451;
 $default-font-size: 1.6rem;
 $font-primary: 'Lora', serif;
 
-$bp-largest: 75em; // 1200px
-$bp-large: 68.75em; // 1100px
-$bp-medium: 56.25em; // 900px
-$bp-small: 37.5em; // 600px
-$bp-smallest: 31.25em; // 500px
-
 *,
 *::before,
 *::after {
@@ -23,9 +17,21 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
 
-  @media only screen and (max-width: $bp-large) {
+  // @include respond-phone {
+  //   font-size: 50%;
+  // }
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
     font-size: 50%;
   }
+
+  // @include respond(big-desktop) {
+  //   font-size: 75%; // 1rem = 12, 12/16
+  // }
 }
 
 body {
@@ -33,27 +39,4 @@ body {
   color: red;
   font-weight: 300;
   line-height: 1.6;
-}
-
-.container {
-  display: grid;
-  grid-template-rows: repeat(4, min-content);
-  grid-template-columns:
-    [full-start] minmax(6rem, 1fr)
-    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
-    [center-end] minmax(6rem, 1fr) [full-end];
-
-  @media only screen and (max-width: $bp-large) {
-    grid-template-rows: repeat(4, min-content);
-    grid-template-columns:
-      [full-start] minmax(6rem, 1fr) [center-start] repeat(
-        8,
-        [col-start] minmax(min-content, 14rem) [col-end]
-      )
-      [center-end] minmax(6rem, 1fr) [full-end];
-  }
-
-  @media only screen and (max-width: $bp-medium) {
-    grid-template-rows: 6rem calc(100vh - 6rem);
-  }
 }

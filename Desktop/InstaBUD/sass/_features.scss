@@ -1,5 +1,4 @@
 .section {
-  // background-color: #f3f3f3;
   color: black;
   padding: 8rem 3rem;
   border-top: 1px solid #ddd;
@@ -29,13 +28,15 @@
 }
 
 .features {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(300px, 1fr));
-  grid-template-rows: repeat(3, minmax(300px, 520px));
-  grid-row-gap: 30px;
-  grid-column-gap: 30px;
-  margin: 0 20rem;
+  margin: 0 10rem;
 
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, 1fr));
+  grid-template-rows: repeat(3, minmax(50%, 1fr));
+
+  @include respond(tab-port) {
+    margin: 0;
+  }
   &__header {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -49,7 +50,7 @@
   &__feature {
     // text-overflow: clip;
     align-self: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 3rem;
     // border: 1px solid purple;
   }
