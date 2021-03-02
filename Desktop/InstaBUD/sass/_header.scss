@@ -335,20 +335,18 @@ nav {
 
 // animation
 
-@keyframes hover-v {
+@keyframes fill {
   0% {
-    transform: scaleX(0);
-    height: 5px;
+    width: 0%;
+    height: 1px;
   }
-  45% {
-    transform: scaleX(1.05);
-    height: 5px;
-  }
-  55% {
-    height: 5px;
+  50% {
+    width: 100%;
+    height: 1px;
   }
   100% {
-    transform: scaleX(1.05);
-    height: 3.8rem;
+    width: 100%;
+    height: 100%;
+    background: #333;
   }
 }
