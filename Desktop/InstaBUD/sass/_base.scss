@@ -16,6 +16,7 @@ $font-primary: 'Lora', serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
 
   // @include respond-phone {
   //   font-size: 50%;
@@ -40,3 +41,19 @@ body {
   font-weight: 300;
   line-height: 1.6;
 }
+
+.cookie-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: white;
+  color: #bbb;
+  font-size: 1.5rem;
+  font-weight: 400;
+  // min-height: 1rem;
+}
+
+// .btn--close-cookie {
+//   background-color: blue;
+// }

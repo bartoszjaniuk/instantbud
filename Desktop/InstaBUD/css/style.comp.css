@@ -17,7 +17,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -30,6 +31,18 @@ body {
   color: red;
   font-weight: 300;
   line-height: 1.6; }
+
+.cookie-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: white;
+  color: #bbb;
+  font-size: 1.5rem;
+  font-weight: 400;
+  min-height: 10rem;
+  border: 1px solid purple; }
 
 .header {
   position: relative;
