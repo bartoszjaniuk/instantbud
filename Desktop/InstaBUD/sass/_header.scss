@@ -287,10 +287,9 @@ nav {
     display: block;
     position: absolute;
     cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 22;
+    right: 5.5%;
+    top: 46%;
+    z-index: 1000;
   }
   // TU
   .nav__links {
@@ -299,13 +298,15 @@ nav {
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    z-index: -1;
-    clip-path: circle(25px at 92.5% 2.5%);
-    -webkit-clip-path: circle(25px at 92.5% 2.5%);
+    // z-index: -1;
+    clip-path: circle(30px at 92% 5%);
+    -webkit-clip-path: circle(30px at 92% 5%);
     transition: all 1s ease-out;
     pointer-events: none;
     justify-content: space-evenly;
-    margin-top: 3.2rem;
+    margin-top: 0;
+
+    opacity: 0;
   }
   .nav__link {
     font-size: 3rem;
@@ -318,6 +319,7 @@ nav {
     -webkit-clip-path: circle(1200px at 90% 10%);
     pointer-events: all;
     display: flex;
+    opacity: 1;
   }
 
   .hamburger.open .line__burger {
