@@ -1,7 +1,7 @@
 {
-  "name": "instabud",
+  "name": "instantbud",
   "version": "1.0.0",
-  "description": "instabud - we build for you instantly",
+  "description": "instantbud - we build for you instantly",
   "main": "index.html",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
